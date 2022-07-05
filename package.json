@@ -1,7 +1,7 @@
 {
-  "name": "ionic-native-http-connection-backend",
+  "name": "@approov/ionic-native-http-connection-backend",
   "version": "10.0.0",
-  "description": "A solution to CORS problem with Ionic and WKWebView",
+  "description": "Allows the Approov advanced http plugin to be used with Ionic angular Http and HttpClient requests",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
@@ -13,20 +13,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sneas/ionic-native-http-connection-backend.git"
+    "url": "https://github.com/approov/ionic-native-http-connection-backend.git"
   },
   "keywords": [
     "ionic",
     "ionic3",
-    "wk-web-view",
-    "cors"
+    "approov",
+    "tls pinning"
   ],
   "author": "Dmytro Snisarenko",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sneas/ionic-native-http-connection-backend/issues"
+    "url": "https://github.com/approov/ionic-native-http-connection-backend/issues"
   },
-  "homepage": "https://github.com/sneas/ionic-native-http-connection-backend#readme",
+  "homepage": "https://github.com/approov/ionic-native-http-connection-backend#readme",
   "devDependencies": {
     "@angular/common": "^12.0.1",
     "@angular/compiler": "^12.0.1",
@@ -35,10 +35,9 @@
     "@angular/forms": "^12.0.1",
     "@angular/platform-browser": "^12.0.1",
     "@angular/router": "^12.0.1",
+    "@awesome-cordova-plugins/core": "^5.37.3",
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
-    "@awesome-cordova-plugins/core": "^5.37.3",
-    "@awesome-cordova-plugins/http": "^5.37.3",
     "@ionic/angular": "^5.6.7",
     "@ionic/core": "^5.6.7",
     "@semantic-release/git": "^9.0.0",
@@ -60,8 +59,7 @@
     "zone.js": "^0.11.4"
   },
   "peerDependencies": {
-    "@angular/core": ">=12.0.1",
-    "@awesome-cordova-plugins/http": "^5.36.0"
+    "@angular/core": ">=12.0.1"
   },
   "config": {
     "commitizen": {
@@ -119,5 +117,8 @@
         "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
       }
     ]
+  },
+  "dependencies": {
+    "@awesome-cordova-plugins/approov-advanced-http": "^5.44.0"
   }
 }

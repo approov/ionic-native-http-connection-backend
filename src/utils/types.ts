@@ -1,4 +1,4 @@
-import { HTTP } from '@awesome-cordova-plugins/http/ngx';
+import { HTTP } from '@awesome-cordova-plugins/approov-advanced-http/ngx';
 
 export type RequestOptions =
     | Parameters<typeof HTTP.prototype.sendRequest>[1]

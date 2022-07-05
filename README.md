@@ -3,9 +3,11 @@
 [![version](https://img.shields.io/npm/v/ionic-native-http-connection-backend.svg?style=flat-square)](http://npm.im/ionic-native-http-connection-backend)
 [![MIT License](https://img.shields.io/npm/l/component-library.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 
-This library adds `@awesome-cordova-plugins/http` (when available) as a connection backend to Angular's `Http` and `HttpClient`
+This library adds [`@awesome-cordova-plugins/approov-advanced-http`](https://www.npmjs.com/package/@approov/cordova-plugin-advanced-http) (when available) as a connection backend to Angular's `Http` and `HttpClient`.
 
-## Motivation
+This is a fork of project original developed for a different reason, see [CORS Motivation](#cors-motivation). It is being used to intercept Angular requests so they can use the Advanced Http Plugin that has been updated to provide Approov protection.
+
+## CORS Motivation
 
 Now that Apple promotes/requires the use of `WKWebView` instead of the deprecated `UIWebView`, Ionic has switched newly created apps over via their [`cordova-plugin-ionic-webview`](https://github.com/ionic-team/cordova-plugin-ionic-webview) 
 (and Cordova offers it via their [`cordova-plugin-wkwebview-engine`](https://github.com/apache/cordova-plugin-wkwebview-engine)). That causes requests that used to work just fine to fail with [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) errors.
@@ -17,8 +19,8 @@ Even though there is a way to solve CORS issues without changing server's respon
 ## How it works
 
 - The library provides a `HttpBackend` interface for Angular's `HttpClient`
-- This `HttpBackend` interface tries to use `@awesome-cordova-plugins/http` whenever it is possible (= on device with installed plugin)
-- If `HttpBackend` finds it impossible to use `@awesome-cordova-plugins/http`, it falls back to standard Angular code (`HttpXhrBackend`, which uses `XmlHttpRequest`)
+- This `HttpBackend` interface tries to use `@awesome-cordova-plugins/approov-advanced-http` whenever it is possible (= on device with installed plugin)
+- If `HttpBackend` finds it impossible to use `@awesome-cordova-plugins/approov-advanced-http`, it falls back to standard Angular code (`HttpXhrBackend`, which uses `XmlHttpRequest`)
 
 This strategy allows developers to use Angular's `HttpClient` transparently in both environments: Browser and Device.
 

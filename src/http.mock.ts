@@ -1,4 +1,4 @@
-import { HTTP, HTTPResponse } from '@awesome-cordova-plugins/http/ngx';
+import { HTTP, HTTPResponse } from '@awesome-cordova-plugins/approov-advanced-http/ngx';
 
 import { HTTPError } from './http-error';
 

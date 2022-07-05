@@ -1,6 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { HTTP } from '@awesome-cordova-plugins/http/ngx';
+import { HTTP } from '@awesome-cordova-plugins/approov-advanced-http/ngx';
 
 import { NativeHttpBackend } from './native-http-backend';
 
