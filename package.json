@@ -1,6 +1,6 @@
 {
   "name": "@approov/ionic-native-http-connection-backend",
-  "version": "10.0.0",
+  "version": "10.0.1",
   "description": "Allows the Approov advanced http plugin to be used with Ionic angular Http and HttpClient requests",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
